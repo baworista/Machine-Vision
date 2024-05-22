@@ -71,7 +71,7 @@ def main(method='sift', k=3):
     # Wyciągnięcie cech przy pomocy SIFT
     images = [cv.imread(path) for path in image_paths]
 
-    image = images[0]  # Wybierz pierwszy obraz z images jako image
+    image = images[0]  # Wybierz pierwszy obraz z unlabeled_faces jako image
     cap = cv.VideoCapture(video_path)
 
     while True:
