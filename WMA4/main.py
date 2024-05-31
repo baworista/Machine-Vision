@@ -53,6 +53,7 @@ X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=0.12
 X_train = np.array(X_train) / 255.0
 X_val = np.array(X_val) / 255.0
 X_test = np.array(X_test) / 255.0
+
 y_train = to_categorical(y_train, num_classes=len(label_dict))
 y_val = to_categorical(y_val, num_classes=len(label_dict))
 y_test = to_categorical(y_test, num_classes=len(label_dict))
@@ -80,9 +81,9 @@ model = Sequential([
     Dense(512, activation='relu'),
     BatchNormalization(),
 
-    # Dense(128, activation='relu'),
-    # BatchNormalization(),
-    # Dropout(0.3),
+    Dense(128, activation='relu'),
+    BatchNormalization(),
+    Dropout(0.3),
 
     Dense(len(label_dict), activation='sigmoid')
 ])
