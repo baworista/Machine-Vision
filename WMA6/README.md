@@ -1,0 +1,1 @@
+Korzystając z poznanych na zajęciach technik napisz program który będzie odczytywał obraz z kamery. Następnie rozpozna twoją twarz i nałoży na nią jakiś element w rodzaju okularów czy wąsów. 
